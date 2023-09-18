@@ -30,3 +30,15 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
 }
+
+.box {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  background: rgb(242, 205, 26);
+  background: linear-gradient(
+    0deg,
+    rgba(242, 205, 26, 1) 35%,
+    rgba(24, 255, 0, 1) 100%
+  );
+}
