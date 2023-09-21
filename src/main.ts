@@ -19,14 +19,18 @@ function moveBox() {
 
   const invertX = first.x - last.x;
   const invertY = first.y - last.y;
+  const invertWidth = first.width / last.width;
 
   box.animate(
     [
-      { transform: `translateX(${invertX}px) translateY(${invertY}px)` },
+      {
+        transformOrigin: 'top left',
+        transform: `translateX(${invertX}px) translateY(${invertY}px) scale(${invertWidth})`,
+      },
       { transform: 'none' },
     ],
     {
-      duration: 300,
+      duration: 3000,
       easing: 'ease-in-out',
     }
   );
@@ -35,4 +39,5 @@ function moveBox() {
 function toggleClasses(box: HTMLDivElement) {
   box.classList.toggle('float-right');
   box.classList.toggle('push-down');
+  box.classList.toggle('large');
 }

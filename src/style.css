@@ -50,3 +50,7 @@ h1 {
 .box.push-down {
   margin-top: 40vh;
 }
+
+.box.large {
+  --size: 300px;
+}
