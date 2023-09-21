@@ -9,11 +9,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 document.addEventListener('click', moveBox);
 
 function moveBox() {
-  const box = document.querySelector('.box')!;
+  const box = document.querySelector('.box') as HTMLDivElement;
 
   const first = box.getBoundingClientRect();
 
-  box.classList.toggle('float-right');
+  toggleClasses(box);
 
   const last = box.getBoundingClientRect();
 
@@ -26,4 +26,9 @@ function moveBox() {
       easing: 'ease-in-out',
     }
   );
+}
+
+function toggleClasses(box: HTMLDivElement) {
+  box.classList.toggle('float-right');
+  box.classList.toggle('push-down');
 }

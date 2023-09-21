@@ -46,3 +46,7 @@ h1 {
 .box.float-right {
   float: right;
 }
+
+.box.push-down {
+  margin-top: 40vh;
+}
