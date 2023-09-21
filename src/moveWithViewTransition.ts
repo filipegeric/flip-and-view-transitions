@@ -1,5 +1,8 @@
-function moveWithViewTransition(element: Element, updateDOM: () => void) {
-  document.startViewTransition(() => updateDOM());
+function moveWithViewTransition(element: HTMLElement, updateDOM: () => void) {
+  element.style.viewTransitionName = 'moving-box';
+  document
+    .startViewTransition(() => updateDOM())
+    .finished.then(() => (element.style.viewTransitionName = undefined));
 }
 
 export { moveWithViewTransition };
