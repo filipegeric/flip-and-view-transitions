@@ -1,4 +1,4 @@
-import { moveWithFlip } from './moveWithFlip';
+import { moveWithViewTransition } from './moveWithViewTransition';
 import './style.css';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -12,7 +12,7 @@ document.addEventListener('click', moveBox);
 function moveBox() {
   const box = document.querySelector('.box') as HTMLDivElement;
 
-  moveWithFlip(box, () => toggleClasses(box));
+  moveWithViewTransition(box, () => toggleClasses(box));
 }
 
 function toggleClasses(box: HTMLDivElement) {
