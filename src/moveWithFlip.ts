@@ -18,7 +18,7 @@ export function moveWithFlip(element: HTMLElement, updateDOM: () => void) {
       { transform: 'none' },
     ],
     {
-      duration: 3000,
+      duration: 300,
       easing: 'ease-in-out',
     }
   );

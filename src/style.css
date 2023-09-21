@@ -32,7 +32,7 @@ h1 {
 }
 
 ::view-transition-group(moving-box) {
-  animation-duration: 3s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
 }
 
