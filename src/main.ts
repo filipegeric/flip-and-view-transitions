@@ -18,9 +18,13 @@ function moveBox() {
   const last = box.getBoundingClientRect();
 
   const invertX = first.x - last.x;
+  const invertY = first.y - last.y;
 
   box.animate(
-    [{ transform: `translateX(${invertX}px)` }, { transform: 'none' }],
+    [
+      { transform: `translateX(${invertX}px) translateY(${invertY}px)` },
+      { transform: 'none' },
+    ],
     {
       duration: 300,
       easing: 'ease-in-out',
