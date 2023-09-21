@@ -5,3 +5,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="box"></div>
   </div>
 `;
+
+document.addEventListener('click', moveBox);
+
+function moveBox() {
+  const box = document.querySelector('.box')!;
+
+  box.classList.toggle('float-right');
+}

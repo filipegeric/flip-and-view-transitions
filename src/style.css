@@ -42,3 +42,7 @@ h1 {
     rgba(24, 255, 0, 1) 100%
   );
 }
+
+.box.float-right {
+  float: right;
+}
