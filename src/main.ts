@@ -11,17 +11,21 @@ document.addEventListener('click', moveBox);
 function moveBox() {
   const box = document.querySelector('.box') as HTMLDivElement;
 
-  const first = box.getBoundingClientRect();
+  moveWithFlip(box, () => toggleClasses(box));
+}
 
-  toggleClasses(box);
+function moveWithFlip(element: HTMLElement, updateDOM: () => void) {
+  const first = element.getBoundingClientRect();
 
-  const last = box.getBoundingClientRect();
+  updateDOM();
+
+  const last = element.getBoundingClientRect();
 
   const invertX = first.x - last.x;
   const invertY = first.y - last.y;
   const invertWidth = first.width / last.width;
 
-  box.animate(
+  element.animate(
     [
       {
         transformOrigin: 'top left',
