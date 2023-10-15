@@ -1,0 +1,6 @@
+.box {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  background: aqua;
+}
