@@ -4,3 +4,7 @@
   height: var(--size);
   background: aqua;
 }
+
+.box.right {
+  float: right;
+}
